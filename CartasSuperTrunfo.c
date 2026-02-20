@@ -16,6 +16,7 @@ int main() {
     float area_da_cidade;
     float PIB;
     int pontos_turisticos;
+    float densidade_populacional, PIB_per_capita;
 
   // carta 02
     int carta_2;
@@ -26,6 +27,7 @@ int main() {
     float area_da_cidade_2;
     float PIB_2;
     int pontos_turisticos_2;
+    float densidade_populacional_2, PIB_per_capita_2;
 
 
   // Área para entrada de dados 'Carta 01'
@@ -53,6 +55,9 @@ int main() {
 
     printf("Digite o numero de pontos turisticos da cidade:\n");
     scanf("%d", &pontos_turisticos);
+    
+    densidade_populacional = (float) populacao / area_da_cidade;
+    PIB_per_capita = (float) PIB / populacao;
 
   // Área para entrada de dados 'Carta 02'
 
@@ -81,6 +86,9 @@ int main() {
     printf("Digite o numero de pontos turisticos da cidade:\n");
     scanf("%d", &pontos_turisticos_2);
 
+    densidade_populacional_2 = (float) populacao_2 / area_da_cidade_2;
+    PIB_per_capita_2 = (float) PIB_2 / populacao_2;
+
   // Área para exibição dos dados da cidade
 
   //CARTA 01
@@ -94,14 +102,18 @@ int main() {
       "População: %d\n"
       "Área: %.2f\n"
       "PIB: %.2f\n"
-      "Numeros de pontos Turisticos: %d\n",
+      "Numeros de pontos Turisticos: %d\n"
+      "Densidade Populacional: %.2f\n"
+      "PIB per Capita: %.2f\n",
       estado,
       estado, carta,
       nome_cidade,
       populacao,
       area_da_cidade,
       PIB,
-      pontos_turisticos);
+      pontos_turisticos,
+      densidade_populacional,
+      PIB_per_capita);
 
  //CARTA 02
   
@@ -114,13 +126,17 @@ int main() {
       "População: %d\n"
       "Área: %.2f\n"
       "PIB: %.2f\n"
-      "Numeros de pontos Turisticos: %d\n",
+      "Numeros de pontos Turisticos: %d\n"
+      "Densidade Populacional: %.2f\n"
+      "PIB per Capita: %.2f\n",
       estado_2,
       estado_2, carta_2,
       nome_cidade_2,
       populacao_2,
       area_da_cidade_2,
       PIB_2,
-      pontos_turisticos_2);
+      pontos_turisticos_2,
+      densidade_populacional_2,
+      PIB_per_capita_2);
 return 0;
 } 
